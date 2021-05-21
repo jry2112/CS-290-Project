@@ -1,7 +1,8 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
-
+var path = require('path');
 var app = express();
+app.set('port', process.env.PORT || 3000 || 80);
 
 // Configure template Engine and Main Template File
 app.engine('.hbs', exphbs({
@@ -11,6 +12,9 @@ app.engine('.hbs', exphbs({
 
 // Setting the template Engine
 app.set('view engine', '.hbs');
+
+// Get style files
+app.use(express.static(__dirname + '/public'));
 
 // routes
 app.get('/', (req, res) => {
@@ -27,6 +31,6 @@ app.get('/support', (req, res) => {
 });
 
 // port where app is served
-app.listen(3000, () => {
-    console.log('The web server has started on port 3000')
+app.listen(app.get('port'), () => {
+    console.log('The web server has started on port ' + app.get('port'));
 });
