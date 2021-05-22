@@ -13,8 +13,10 @@ app.engine('.hbs', exphbs({
 // Setting the template Engine
 app.set('view engine', '.hbs');
 
-// Get style files
-app.use(express.static(__dirname + '/public'));
+// Get style and source files
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 // routes
 app.get('/', (req, res) => {

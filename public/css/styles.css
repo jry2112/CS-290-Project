@@ -1,3 +1,14 @@
-.carousel-item {
-    width: 85%;
+.carousel-inner img { 
+    height: 200px;
+    width: auto; 
+    height: auto; 
+}
+.carousel-content {
+    max-width: 980px;
+    margin: auto;
+}
+
+#listenButton {
+    position:absolute;
+    right: 5px;
 }

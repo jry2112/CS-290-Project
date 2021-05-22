@@ -1,30 +1,66 @@
-<div class="bd-example">
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div class="carousel-content">
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/on-air-sign.jpg" class="d-block w-100" alt="on air sign"> 
+          <div class="carousel-caption">
+            <p>Photo by <a href="https://unsplash.com/@nittygritty_photo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fringer Cat</a> on 
+            <a href="https://unsplash.com/s/photos/radio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+          </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="images/singer.jpg" class="d-block w-100" alt="on air sign"> 
+          <div class="carousel-caption">
+            <p>Photo by <a href="https://unsplash.com/@arstyy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Austin Neill</a>
+            on <a href="https://unsplash.com/s/photos/singer-with-mic?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+          </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="images/concert.jpg" class="d-block w-100" alt="concert"> 
+          <div class="carousel-caption">
+            <p>Photo by <a href="https://unsplash.com/@vishnurnair?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vishnu R Nair</a>
+            on <a href="https://unsplash.com/s/photos/concert?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+          </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
+</div>
 
-    </div>
-    <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"/><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
+<div class="html-plugin">
+			<style>.pip[data-tower-id="e5540311a71945e7a39dac7041e2f429-0-0-2"]{width:100%}</style>
+			<div class="html-plugin__content">
+				<center><script></script>
+        <p><img class="listen-live" src="https://radio.securenetsystems.net/images/listen-live.png" width="200" height="116" border="0" style="cursor:pointer;""></p></center>
+			</div>
+		</div>
 
+<!-- Newsletter Subscription Form -->
+<div class="form-container" id="newletterForm">
+  <form>
+    <div class="form-header">
+      <h1>Subscribe to our Newsletter</h1>
+      <p>Sign up to get early access to upcoming events, store discounts, and more!</p>
     </div>
-    <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"/><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
 
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+  </form>
 </div>
