@@ -6,15 +6,29 @@
         <img alt="youtube-logo" src="images/icons/youtube.png">
     </a>
     <!-- click email icon to open contact form -->
-    <div class="contact-form-popup" id="contactForm">
-        <form action="mailto:jyoung@csgincofva.com"
-        method="POST"
-        enctype="multipart/form-data"
-        name="EmailForm">
+    <div class="contact-form-popup" id="contactFormDiv">
+        <form id="contactForm" method="post" role="form" >
+            <fieldset>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required>
+                
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="Your email" required>
+
+                <label for="message">Message</label>
+                <textarea
+                id="message"
+                name="message"
+                placeholder="Enter your message here"
+                rows="3" 
+                required>
+                </textarea>
+
+                <button type="submit">Submit</button>
+            </fieldset>
         </form>
     </div>
     
-    <a href="">
-        <img alt="send email" src="images/icons/mail.png">
-    </a>
+<button type="button" class="btn btn-primary" onclick="handlePopUp()">Contact Us</button>
+    
 </div>

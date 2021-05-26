@@ -1,3 +1,87 @@
 <div class="container">
-    <h1>This is the events page</h1>
+    <h1>Upcoming Events</h1>
+    <div class="event" id="festival">
+        <figure>
+            <img src="images/event1.jpg" class="img-fluid" id="concertPhoto" img alt="Event Photo">
+            <figcaption>by <a href="https://unsplash.com/@voneciacarswell?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Vonecia Carswell</a> on
+            <a href="https://unsplash.com/s/photos/concert-afropunk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption> 
+        </figure>
+        <ul class="list-group list-group-flush">
+            <h4>Details</h4>
+            <li class="list-group-item">Date: October 13, 2021</li>
+            <li class="list-group-item">Location: 1234 Waverly Road</li>
+            <li class="list-group-item">Time: 12pm-7pm</li>
+        </ul>
+        <!-- Form -->
+        <form action="https://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="POST" id="vendorRegistration" target="_blank">
+            <legend>Vendor Registration</legend>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" id="attendeeName" class="form-control" required>
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" id="attendeeEmail" class="form-control" required>
+                <label for="number" class="form-label">Phone Number (XXX-XXX-XXXX)</label>
+                <input type="text" name="number" id="attendeePhone" class="form-control" required>
+                <label for="business" class="form-label">Business Name</label>
+                <input type="text" name="business" id="attendeeBusName" class="form-control" required>
+                <label for="website" class="form-label">Website</label>
+                <input type="url" name="website" id="attendeeURL" class="form-control" required>
+                <p>Select a vendor type:</p>
+                <div class="mb-3">
+                    <label for="table">10x10 Table Vendor Space</label>
+                    <input type="radio" name="vendor" id="table" value="table" required>
+                    <label for="table">20x10 Mobile Vendor Space</label>
+                    <input type="radio" name="vendor" id="mobile" value="Mobile Vendor" required>
+                </div>
+                <input type="submit" onclick="submitForm()">
+                <button type="submit" onclick="window.open('vendor_map.pdf')">Download Vendor Map</button>
+
+            </div>
+        </form>
+        
+
+    <h1>Past Events</h1>
+<div class="carousel-content">
+  <div id="pastCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images.unsplash.com/photo-1603488246311-1cf4916866d6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1853&q=80" class="d-block w-100" alt="on air sign"> 
+          <div class="carousel-caption">
+              <h4>Car Show</h4>
+              <p>September 4, 2020</p>
+            <p>Photo by <a href="https://unsplash.com/@andreasbrun?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andréas BRUN</a> on
+            <a href="https://unsplash.com/s/photos/exposition?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </p>
+          </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1570441262582-a2d4b9a916a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1031&q=80" class="d-block w-300" alt="on air sign"> 
+          <div class="carousel-caption">
+            <h4>Small Business Food Expo</h4>
+            <p>July 6, 2020</p>
+            <p>Photo by <a href="https://unsplash.com/@arturorey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Arturo Rey</a> on <a href="https://unsplash.com/s/photos/food-truck?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+          </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#pastCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#pastCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 </div>
+

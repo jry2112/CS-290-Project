@@ -763,3 +763,8 @@ node_modules/nodemailer/lib/stream-transport/index.js
 node_modules/nodemailer/lib/well-known/index.js
 node_modules/nodemailer/lib/well-known/services.json
 node_modules/nodemailer/lib/xoauth2/index.js
+node_modules/xmlhttprequest/.jshintrc
+node_modules/xmlhttprequest/.npmignore
+node_modules/xmlhttprequest/LICENSE
+node_modules/xmlhttprequest/README.md
+node_modules/xmlhttprequest/lib/XMLHttpRequest.js
