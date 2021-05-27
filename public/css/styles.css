@@ -18,6 +18,10 @@
     right: 5px;
 }
 
+#submitContact {
+    
+}
+
 div > img {
    width: 300px;
    height: 300px;
@@ -33,3 +37,7 @@ div > img {
     display: none;
 }
 
+#submitContact {
+    width: 70px;
+    height: 30px;
+}
