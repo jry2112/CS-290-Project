@@ -62,7 +62,6 @@ function hideForm(){
 }
 
 function handlePopUp(){
-    debugger;
     if (document.getElementById('contactForm').style.display == "block"){
             hideForm();
     } else {
@@ -70,5 +69,21 @@ function handlePopUp(){
     }
     
 }
+
+// Contact Form
+var contactForm = document.getElementById("contactForm");
+
+function submitContactForm(form) {
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.open("post", form.action, true);
+    xmlhttp.setRequestHeader("Content-Type", "application/json");
+	xmlhttp.send(JSON.stringify({ name: form.name.value, email: form.email.value, message: form.message.value }));
+	
+    xmlhttp.onload = () => {
+        console.log(xmlhttp.responseText);
+    }
+}
+
 
 

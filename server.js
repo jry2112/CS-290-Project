@@ -13,7 +13,11 @@ const https = require('https');
 
 var bodyParser = require('body-parser');
 const { resolveSoa } = require('dns');
+const { response } = require('express');
 app.use(express.urlencoded({extended: true}));
+
+app.use(bodyParser.urlencoded({'extended':'true'}));
+app.use(bodyParser.json());
 
 // Configure template Engine and Main Template File
 app.engine('.hbs', exphbs({
@@ -42,45 +46,39 @@ app.get('/support', (req, res) => {
     res.render('support');
 });
 
+// POST route from contact form
+app.post('/contact', (req, res) => {
 
+  // Instantiate the SMTP server
+  var transport = nodemailer.createTransport({
+    host: "smtp.mailtrap.io",
+    port: 2525,
+    auth: {
+      user: "28f52f69f9e0a8",
+      pass: "9131fe4b38f62d"
+    },
 
-// route for sending email through form using Nodemailer
-// Source --> https://tylerkrys.ca/blog/adding-nodemailer-email-contact-form-node-express-app
-app.post('/', function(req, res, next) {
-    // Create transporter object
-    const transporter = nodemailer.createTransport({
-        host: 'smtp.ethereal.email',
-        port: 587,
-        auth: {
-            user: 'leif.pagac79@ethereal.email',
-            pass: 'buPZkpAX1JDxJtmxsx'
-        },
-        tls: {
-            rejectUnauthorized: false
-        }
-    }); 
-    
-    // Create message object
-    const mailOptions = {
-      from: `${req.body.email}`,
-      to: 'leif.pagac79@ethereal.email',
-      subject: `${req.body.name}`,
-      text: `${req.body.message}`,
-      replyTo: `${req.body.email}`
-    }
-    
-    console.log('sending message')
-    // Send message 
-    transporter.sendMail(mailOptions, function(err, res) {
-      if (err) {
-        console.error('there was an error: ', err);
-        return console.log(error)
-      } else {
-        res.render('post', 'Message sent successfully');
-      };;
-    });
-    
   });
+
+  // Specify what the email will look like
+  const mailOpts = {
+    from: `${req.body.email}`,
+    to: 'user@example.com',
+    subject: 'New message from contact form at DCNR1',
+    text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
+  }
+
+  // Attempt to send the email
+  transport.sendMail(mailOpts, (error, response) => {
+    if (error) {
+      return console.log(error);
+    }
+    else {
+      res.send("Message Sent")
+      
+    }
+  })
+})
 
 
 

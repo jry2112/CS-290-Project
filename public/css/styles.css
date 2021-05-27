@@ -8,6 +8,11 @@
     margin: auto;
 }
 
+.social-icon {
+    height:35px;
+    width:auto;
+}
+
 #listenButton {
     position:absolute;
     right: 5px;
@@ -20,6 +25,11 @@ div > img {
    margin: auto; 
 } 
 
+#about {
+    text-align: center;
+}
+
 #contactForm {
     display: none;
 }
+

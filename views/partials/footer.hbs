@@ -1,34 +1,35 @@
-<div class="social-container">
-    <a href="https://www.facebook.com/pg/DCLARK99.5/posts/">
-        <img alt="facebook-logo" src="images/icons/facebook.png">
-    </a>
-    <a href="https://www.youtube.com/channel/UC--6m0xeXBG1Tn5r7afoNXQ/featured">
-        <img alt="youtube-logo" src="images/icons/youtube.png">
-    </a>
-    <!-- click email icon to open contact form -->
-    <div class="contact-form-popup" id="contactFormDiv">
-        <form id="contactForm" method="post" role="form" >
-            <fieldset>
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Your name" required>
-                
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="Your email" required>
+<div class="container">
+    <nav class="navbar fixed-bottom navbar-light bg-light justify-content-end">
+        
+        <a href="https://www.facebook.com/pg/DCLARK99.5/posts/">
+            <img class="social-icon" alt="facebook-logo" src="images/icons/facebook.png">
+        </a>
+        <a href="https://www.youtube.com/channel/UC--6m0xeXBG1Tn5r7afoNXQ/featured">
+            <img class="social-icon" alt="youtube-logo" src="images/icons/youtube.png">
+        </a>
+        <button type="button" class="btn btn-primary" onclick="handlePopUp()">Contact Us</button>
+        <!-- click Contact Us to open contact form -->
+        <div class="contact-form-popup" id="contactFormDiv">
+            <form id="contactForm" method="POST" action="/contact">
+                <fieldset>
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your name" required>
+                    
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Your email" required>
 
-                <label for="message">Message</label>
-                <textarea
-                id="message"
-                name="message"
-                placeholder="Enter your message here"
-                rows="3" 
-                required>
-                </textarea>
+                    <label for="message">Message</label>
+                    <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Enter your message here"
+                    rows="3" 
+                    required>
+                    </textarea>
 
-                <button type="submit">Submit</button>
-            </fieldset>
-        </form>
-    </div>
-    
-<button type="button" class="btn btn-primary" onclick="handlePopUp()">Contact Us</button>
-    
+                    <button type="submit" class="btn btn-primary btn-sm" value="Submit"></button>
+                </fieldset>
+            </form>
+        </div>
+    </nav>    
 </div>
