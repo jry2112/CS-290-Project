@@ -45,7 +45,7 @@ app.get('/store', (req, res) => {
 app.get('/support', (req, res) => {
     res.render('support');
 });
-
+// Send email using nodemailer -> https://tylerkrys.ca/blog/adding-nodemailer-email-contact-form-node-express-app
 // POST route from contact form
 app.post('/contact', (req, res) => {
 
